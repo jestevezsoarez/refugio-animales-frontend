@@ -10,11 +10,16 @@ export class AppComponent {
   emailContact: string | null = '';
 
   ngOnInit(): void {
-    this.emailContact = localStorage.getItem('emailContacto');
+    this.emailContact = localStorage.getItem('emailContact');
   }
 
   // Uso el Hook DoCheck para bindear el mail si este cambia
-  ngDocheck(): void {
+  ngDoCheck(): void {
     this.emailContact = localStorage.getItem('emailContact');
+  }
+
+  borrarEmail() {
+    localStorage.removeItem('emailContact');
+    this.emailContact = '';
   }
 }
