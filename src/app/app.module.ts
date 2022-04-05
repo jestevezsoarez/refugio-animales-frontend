@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AnimalsComponent } from './components/animals/animals.component';
 import { KeepersComponent } from './components/keepers/keepers.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { KeepersComponent } from './components/keepers/keepers.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(routes)    
   ],
   providers: [ ],

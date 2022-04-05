@@ -3,4 +3,8 @@
 <a [routerLink]="['/keepers']" routerLinkActive="router-link-active">Keepers</a>
 <a [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact</a>
 
+<span *ngIf="emailContact">{{ emailContact }}</span>
+<hr>
+
+
 <router-outlet></router-outlet>
