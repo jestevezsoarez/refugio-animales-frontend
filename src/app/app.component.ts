@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'refugio-frontend';
+  title = 'Refugio de Animales';
   emailContact: string | null = '';
 
   ngOnInit(): void {
