@@ -1,1 +1,11 @@
-<p>home works!</p>
+<div class="col-lg-8 col-lg-offset-2">
+    <div class="jumbotron">
+        <h1>{{ title }}</h1>
+        <p>Enjoy our animals and make an adoption!</p>
+        <p>
+            <a class="btn btn-primary btn-lg btn-home" role="button" [routerLink]="['/animals']">See Animals</a>
+            <a class="btn btn-success btn-lg btn-home" role="button" [routerLink]="['/keepers']">See Keepers</a>
+            <a class="btn btn-warning btn-lg btn-home" role="button" [routerLink]="['/contact']">Contact with us</a>
+        </p>
+    </div>
+</div>

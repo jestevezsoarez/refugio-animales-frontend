@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  title: string = 'Welcome to Refugio de Animales';
+
   constructor() { }
 
   ngOnInit(): void {
