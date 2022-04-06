@@ -11,10 +11,12 @@ export class StoreComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    $( "#txtJquery" ).hide();
-    $( "#btnJquery" ).click( function() {
-      $( "#txtJquery" ).slideToggle();
+    $("#txtJquery").hide();
+    $("#btnJquery").click( function() {
+      $("#txtJquery").slideToggle();
     })
+
+    $("#caja").dotdotdot({});
   }
 
 }
