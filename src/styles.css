@@ -16,3 +16,7 @@
 .btn-home {
     margin-right: 5px;
 }
+
+.navbar-nav .active {
+    border-bottom: 3px solid orange;
+}
