@@ -12,6 +12,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { AnimalsComponent } from './components/animals/animals.component';
 import { KeepersComponent } from './components/keepers/keepers.component';
 import { FormsModule } from '@angular/forms';
+import { StoreComponent } from './components/store/store.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     ContactComponent,
     AnimalsComponent,
-    KeepersComponent
+    KeepersComponent,
+    StoreComponent
   ],
   imports: [
     BrowserModule,
