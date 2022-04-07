@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+// Modules
+import { ModuloEmailModule } from "./moduleEmail/moduloemail.module";
+
 // Routes
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
@@ -14,6 +17,7 @@ import { KeepersComponent } from './components/keepers/keepers.component';
 import { FormsModule } from '@angular/forms';
 import { StoreComponent } from './components/store/store.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +30,8 @@ import { StoreComponent } from './components/store/store.component';
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)    
+    RouterModule.forRoot(routes),
+    ModuloEmailModule    
   ],
   providers: [ ],
   bootstrap: [AppComponent]
