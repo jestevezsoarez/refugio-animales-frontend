@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 // Modules
 import { ModuloEmailModule } from "./moduleEmail/moduloemail.module";
+import { AdminModule } from "./admin/admin.module";
 
 // Routes
 import { RouterModule } from '@angular/router';
@@ -16,10 +17,6 @@ import { AnimalsComponent } from './components/animals/animals.component';
 import { KeepersComponent } from './components/keepers/keepers.component';
 import { FormsModule } from '@angular/forms';
 import { StoreComponent } from './components/store/store.component';
-import { MainComponent } from './admin/components/main/main.component';
-import { ListComponent } from './admin/components/list/list.component';
-import { AddComponent } from './admin/components/add/add.component';
-import { EditComponent } from './admin/components/edit/edit.component';
 
 
 @NgModule({
@@ -29,17 +26,14 @@ import { EditComponent } from './admin/components/edit/edit.component';
     ContactComponent,
     AnimalsComponent,
     KeepersComponent,
-    StoreComponent,
-    MainComponent,
-    ListComponent,
-    AddComponent,
-    EditComponent
+    StoreComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    ModuloEmailModule    
+    ModuloEmailModule,
+    AdminModule    
   ],
   providers: [ ],
   bootstrap: [AppComponent]
