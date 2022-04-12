@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 export class ListComponent implements OnInit {
 
   title: string = 'Listado';
+
+  numbers: number[] = new Array(10);
   
   constructor() { }
 

@@ -17,6 +17,10 @@
     margin-right: 5px;
 }
 
+.btn-group-sm>.btn, .btn-sm {
+    margin-left: 5px;
+}
+
 .navbar-nav .active {
     border-bottom: 3px solid orange;
 }
