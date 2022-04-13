@@ -24,3 +24,21 @@
 .navbar-nav .active {
     border-bottom: 3px solid orange;
 }
+
+.btn_transiciones {
+    padding: 10px;
+    background: red;
+    color: white;
+    border-radius: 20px;
+    border: 4px solid blue;
+    transition: border 2s, border-radius 500ms, background 5s;
+}
+
+.btn_transiciones:hover {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    border-radius: 2px;
+    background: #ccc;
+    border: 1px solid red;
+}
