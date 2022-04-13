@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 // Modules
 import { ModuloEmailModule } from "./moduleEmail/moduloemail.module";
 import { AdminModule } from "./admin/admin.module";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 // Routes
 import { RouterModule } from '@angular/router';
@@ -33,7 +34,8 @@ import { StoreComponent } from './components/store/store.component';
     FormsModule,
     RouterModule.forRoot(routes),
     ModuloEmailModule,
-    AdminModule    
+    AdminModule,
+    BrowserAnimationsModule   
   ],
   providers: [ ],
   bootstrap: [AppComponent]

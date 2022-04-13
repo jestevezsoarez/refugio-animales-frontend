@@ -52,9 +52,11 @@
     width: 200px;
     height: 200px;
     /* animation-name: deslizamiento; */
+    /*
     animation-name: rotacion;
     animation-duration: 10s;
     animation-iteration-count: infinite;
+    */
 }
 
 @keyframes deslizamiento {
