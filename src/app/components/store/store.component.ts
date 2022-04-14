@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from "@angular/animations";
+import { fundido } from "../animation";
 
 declare var $: any; // To avoid error in angular using $ of jquery
 
@@ -19,7 +20,8 @@ declare var $: any; // To avoid error in angular using $ of jquery
       })),
       transition('inactive => active', animate('300ms linear')),
       transition('active => inactive', animate('300ms linear'))
-    ])
+    ]),
+    fundido
   ]
 })
 export class StoreComponent implements OnInit {

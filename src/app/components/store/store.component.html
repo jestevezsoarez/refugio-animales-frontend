@@ -1,28 +1,30 @@
-<a class="boton_activo btn btn-success" [@marcar]="state" (click)="cambiarEstado()">
-    <span *ngIf="state=='active'">Botón activado</span>
-    <span *ngIf="state=='inactive'">Botón inactivo</span>
-</a>
+<div class="col-lg-12" [@fadeIn]>
+    <a class="boton_activo btn btn-success" [@marcar]="state" (click)="cambiarEstado()">
+        <span *ngIf="state=='active'">Botón activado</span>
+        <span *ngIf="state=='inactive'">Botón inactivo</span>
+    </a>
 
-<hr>
-<h4>Animaciones CSS3</h4>
-<a class="btn_transiciones">Transiciones</a>
+    <hr>
+    <h4>Animaciones CSS3</h4>
+    <a class="btn_transiciones">Transiciones</a>
 
-<div class="clearfix"></div>
+    <div class="clearfix"></div>
 
-<div class="caja_animada">
+    <div class="caja_animada">
 
-</div>
+    </div>
 
-<hr>
-<h4>Usar JQuery dentro de Angular</h4>
-<button id="btnJquery">Mostrar texto</button>
-<p id="txtJquery" class="alert alert-warning">
-    Welcome to Refugio de Animales <br>
-    Enjoy our animals and make an adoption!
-</p>
-
-<div id="caja" style="width: 150px; height: 50px; border: 1px solid black;margin-top: 20px;">
-    <p>Welcome to Refugio de Animales
-    Enjoy our animals and make an adoption!
+    <hr>
+    <h4>Usar JQuery dentro de Angular</h4>
+    <button id="btnJquery">Mostrar texto</button>
+    <p id="txtJquery" class="alert alert-warning">
+        Welcome to Refugio de Animales <br>
+        Enjoy our animals and make an adoption!
     </p>
+
+    <div id="caja" style="width: 150px; height: 50px; border: 1px solid black;margin-top: 20px;">
+        <p>Welcome to Refugio de Animales
+        Enjoy our animals and make an adoption!
+        </p>
+    </div>
 </div>
