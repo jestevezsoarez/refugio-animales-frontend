@@ -18,6 +18,8 @@ import { AnimalsComponent } from './components/animals/animals.component';
 import { KeepersComponent } from './components/keepers/keepers.component';
 import { FormsModule } from '@angular/forms';
 import { StoreComponent } from './components/store/store.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { StoreComponent } from './components/store/store.component';
     ContactComponent,
     AnimalsComponent,
     KeepersComponent,
-    StoreComponent
+    StoreComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
