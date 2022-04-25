@@ -7,6 +7,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
+  title: String = "Registro de Usuario";
+
   constructor( 
     private router: Router,
     private activatedRoute: ActivatedRoute
