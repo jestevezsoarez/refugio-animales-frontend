@@ -1,10 +1,10 @@
 export class Animal {
     
     constructor(
-        name: string,
-        description : string,
-        year: number,
-        image: string,
-        user: string
+        public name: string,
+        public description : string,
+        public year: number,
+        public image: string,
+        public user: string
     ){ }
 }
