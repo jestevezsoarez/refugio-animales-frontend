@@ -1,7 +1,5 @@
 import { Injectable } from "@angular/core";
-import { HttpClient, HttpResponse, HttpHeaders } from "@angular/common/http";
-//import 'rxjs/add/operator/map';
-import { Observable } from "rxjs";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { GLOBAL } from './global';
 
 @Injectable({
@@ -14,8 +12,10 @@ export class UserService {
         this.url = GLOBAL.url; 
     }
 
-    register(){
-        console.log("Servicio funcionando");
+    register(user_to_register: any){
+        let params = JSON.stringify(user_to_register);
+        let headers = new HttpHeaders().set('Content-Type', 'application/json');
         
+        return this._http.post(this.url + 'register', params, {headers:headers});
     }
 }
