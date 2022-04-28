@@ -21,6 +21,9 @@ import { StoreComponent } from './components/store/store.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 
+// Services
+import { UserService } from './services/user.service';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +44,7 @@ import { LoginComponent } from './components/login/login.component';
     AdminModule,
     BrowserAnimationsModule   
   ],
-  providers: [ ],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
