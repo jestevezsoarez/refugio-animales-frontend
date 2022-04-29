@@ -1,6 +1,6 @@
-/* body {
-    background-color: #eee;
-} */
+.pointer {
+    cursor: pointer;
+}
 
 .navigation.col-lg-12 {
     margin-top: 10px;
@@ -51,12 +51,6 @@
     border: 5px solid black;
     width: 200px;
     height: 200px;
-    /* animation-name: deslizamiento; */
-    /*
-    animation-name: rotacion;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    */
 }
 
 @keyframes deslizamiento {

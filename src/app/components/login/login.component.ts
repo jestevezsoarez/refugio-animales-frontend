@@ -21,11 +21,12 @@ export class LoginComponent implements OnInit {
       private userService: UserService
   ) {
       this.title = 'Login de Usuario';
-      this.user = new User('', '', '', '', '', 'ROLE_USER', '');
+      this.user = new User('', '', '', '', '', 'ROLE_USER', ''); 
    }
 
   ngOnInit(): void {
-        
+      console.log(localStorage.getItem('identity'));
+      console.log(localStorage.getItem('token'));                 
   }
 
   onSubmit(): void {
@@ -37,8 +38,10 @@ export class LoginComponent implements OnInit {
         if (!this.identity || !this.identity._id) {
           alert('El usuario no se ha logueado correctamente');
         } else {
-          this.identity.password = '';
-          console.log(this.identity);
+          // Vacio el password porque se logueo correctamente
+          this.identity.password = '';          
+          
+          localStorage.setItem('identity', JSON.stringify(this.identity));         
           
           // Conseguir el token
           this.userService.signup(this.user, true).subscribe(
@@ -48,8 +51,10 @@ export class LoginComponent implements OnInit {
               if (this.token.length <= 0) {
                 alert('El token no se ha generado');
               } else {
-                console.log(this.token);
+                localStorage.setItem('token', this.token);
                 this.status = 'success';
+                //this.router.navigate(['/']);
+                window.location.href="/"; // no me funciona el hook doCheck por eso hago un refresh
               }
             },
             error => {
