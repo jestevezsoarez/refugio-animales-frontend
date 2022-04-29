@@ -13,9 +13,10 @@ export class UserEditComponent implements OnInit {
   user: User;
   identity: any;
   token: any;
+  status: string = '';
 
   constructor( private userService: UserService ) {
-    this.title = 'Actualizar mis datos';
+    this.title = 'Update my Data';
     this.identity = this.userService.getIdentity();
     this.token = this.userService.getToken();
     this.user = this.identity;
@@ -24,6 +25,10 @@ export class UserEditComponent implements OnInit {
   ngOnInit(): void {
     
     
+  }
+
+  onSubmit() {
+
   }
 
 }

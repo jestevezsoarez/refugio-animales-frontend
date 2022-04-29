@@ -1,3 +1,36 @@
 <div class="col-lg-6">
     <h1>{{ title }}</h1>
+
+    <div class="alert alert-success" *ngIf="status == 'success'">
+        Has actualizado tu información correctamente!
+    </div>
+
+    <div class="alert alert-danger" *ngIf="status == 'error'">
+        Can't update the data
+    </div>
+
+    <form #userEditForm="ngForm" (ngSubmit)="onSubmit()" class="col-lg-10">
+        <p>
+            <label for="name">Name</label>
+            <input type="text" name="name" #name="ngModel" [(ngModel)]="user.name" class="form-control" required>
+            <span *ngIf="!name.valid && name.touched">
+                The name is required.
+            </span>
+        </p>
+        <p>
+            <label for="surname">Last Name</label>
+            <input type="text" name="surname" class="form-control" #surname="ngModel" [(ngModel)]="user.surname" required>
+            <span *ngIf="!surname.valid && surname.touched">
+                The last name is required.    
+            </span>
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input type="email" name="email" #email="ngModel" [(ngModel)]="user.email" class="form-control" required>
+            <span *ngIf="!email.valid && email.touched">
+                The email is required.    
+            </span>
+        </p>
+        <input type="submit" value="Update my data" class="btn btn-primary" [disabled]="!userEditForm.form.valid">
+    </form>
 </div>
