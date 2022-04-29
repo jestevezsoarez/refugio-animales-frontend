@@ -23,6 +23,7 @@ import { LoginComponent } from './components/login/login.component';
 
 // Services
 import { UserService } from './services/user.service';
+import { UserEditComponent } from './components/user-edit/user-edit.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { UserService } from './services/user.service';
     KeepersComponent,
     StoreComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
