@@ -20,10 +20,11 @@ import { FormsModule } from '@angular/forms';
 import { StoreComponent } from './components/store/store.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { UserEditComponent } from './components/user-edit/user-edit.component';
 
 // Services
 import { UserService } from './services/user.service';
-import { UserEditComponent } from './components/user-edit/user-edit.component';
+import { UploadService } from './services/upload.service';
 
 
 @NgModule({
@@ -46,7 +47,10 @@ import { UserEditComponent } from './components/user-edit/user-edit.component';
     AdminModule,
     BrowserAnimationsModule   
   ],
-  providers: [UserService],
+  providers: [
+    UserService,
+    UploadService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

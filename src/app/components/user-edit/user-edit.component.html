@@ -31,6 +31,10 @@
                 The email is required.    
             </span>
         </p>
+
+        <label for="image">Upload your image</label>
+        <input type="file" name="image" placeholder="Select image..." (change)="fileChangeEvent($event)"/>
+
         <input type="submit" value="Update my data" class="btn btn-primary" [disabled]="!userEditForm.form.valid">
     </form>
 </div>
