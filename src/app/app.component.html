@@ -68,6 +68,12 @@
                                 My Data
                             </a>
                         </li>
+                        <li *ngIf="identity.role == 'ROLE_ADMIN'">
+                            <a [routerLink]="['/admin-panel']">
+                                <span class="glyphicon glyphicon-tasks"></span>
+                                Admin Panel
+                            </a>
+                        </li>
                         <li>                            
                             <a class="pointer" (click)="logout()">
                                 <span class="glyphicon glyphicon-log-out"></span>
