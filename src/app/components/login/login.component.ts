@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
           alert('El usuario no se ha logueado correctamente');
         } else {
           // Vacio el password porque se logueo correctamente
-          this.identity.password = '';          
+          //this.identity.password = '';          
           
           localStorage.setItem('identity', JSON.stringify(this.identity));         
           

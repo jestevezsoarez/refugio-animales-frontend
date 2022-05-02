@@ -53,6 +53,17 @@
     height: 200px;
 }
 
+.image_for_edit img {
+    width: 60px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 500px;
+} 
+
 @keyframes deslizamiento {
     from {
         margin-left: 0px;

@@ -1,6 +1,7 @@
 import { Component, DoCheck, OnInit } from '@angular/core';
 import { UserService } from './services/user.service';
 import { Router } from '@angular/router';
+import { GLOBAL } from "./services/global";
 
 @Component({
   selector: 'app-root',
@@ -12,11 +13,13 @@ export class AppComponent implements OnInit, DoCheck{
   emailContact: string | null = '';
   public identity: any;
   public token: any;
-  logged: boolean; 
+  logged: boolean;
+  url: string; 
 
   constructor(private userService: UserService, private router: Router) {
     this.title = 'Refugio de Animales';
-    this.logged = false;          
+    this.logged = false;
+    this.url = GLOBAL.url;
   }
 
   ngOnInit() {    

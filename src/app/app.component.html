@@ -53,6 +53,9 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right" *ngIf="logged">
+                <li>
+                    <img src="{{url + 'get-image-file/' + identity.image}}" class="avatar">
+                </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         {{identity.name}} <span class="caret"></span>
