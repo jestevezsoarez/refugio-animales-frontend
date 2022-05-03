@@ -59,8 +59,7 @@ export class UserEditComponent implements OnInit {
 
   fileChangeEvent(fileInput: any) {
      this.filesToUpload = <Array<File>>fileInput.target.files;
-     console.log(this.filesToUpload);
-     
+     console.log(this.filesToUpload);     
   }
 
 }
