@@ -21,6 +21,7 @@ export class AddComponent implements OnInit {
   identity: string;
   token: string;
   url: string;
+  status: string;
 
   constructor(
     private _activatedRoute:ActivatedRoute, 
@@ -34,9 +35,34 @@ export class AddComponent implements OnInit {
       this.identity = this._userService.getIdentity();
       this.token = this._userService.getToken();
       this.url = GLOBAL.url;
+      this.status = '';
    }
 
   ngOnInit(): void {
+  }
+
+  onSubmit() {
+    console.log(this.animal);
+    this._animalService.addAnimal(this.token, this.animal).subscribe(
+        (response: any) => {
+          if (!response.animal) {
+            this.status = 'error';
+          } else {
+            this.status = 'success';
+            this.animal = response.animal;
+
+            // subir imagen del animal
+            this._router.navigate(['/admin-panel/listado']);
+          }
+        },
+        error => {
+          var errorMessage = <any>error;
+
+          if (errorMessage != null) {
+            this.status = 'error';
+          }
+        }
+    );
   }
 
 }
