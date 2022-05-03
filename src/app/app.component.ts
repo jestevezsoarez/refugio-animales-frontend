@@ -23,8 +23,7 @@ export class AppComponent implements OnInit, DoCheck{
   }
 
   ngOnInit() {    
-    this.identity = this.userService.getIdentity();
-    console.log(this.identity);    
+    this.identity = this.userService.getIdentity();        
 
     if (this.identity.name) {
       this.logged = true;

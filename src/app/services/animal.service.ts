@@ -20,8 +20,13 @@ export class AnimalService {
         let params = JSON.stringify(animal);
 
         let headers = new HttpHeaders().set('Content-Type', 'application/json')
-        .set('Authorization', token);
+                            .set('Authorization', token);
 
         return this._http.post(this.url + 'animal', params, {headers: headers});                            
+    }
+
+    getAnimals() {
+        let headers = new HttpHeaders().set('Content-Type', 'application/json');
+        return this._http.get(this.url + 'animals', {headers: headers}); 
     }
 }
