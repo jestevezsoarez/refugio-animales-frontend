@@ -7,6 +7,8 @@ import { StoreComponent } from './components/store/store.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { UserEditComponent } from './components/user-edit/user-edit.component';
+import { AnimalDetailComponent } from "./components/animal-detail/animal-detail.component";
+
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -18,5 +20,6 @@ export const routes: Routes = [
     { path: 'register', component: RegisterComponent },
     { path: 'login', component: LoginComponent },
     { path: 'mis-datos', component: UserEditComponent },
+    { path: 'animal/:id', component: AnimalDetailComponent },
     { path: '**', component: HomeComponent }    
 ];

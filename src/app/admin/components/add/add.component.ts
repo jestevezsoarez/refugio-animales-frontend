@@ -43,7 +43,7 @@ export class AddComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.animal);
+    //console.log(this.animal);
     this._animalService.addAnimal(this.token, this.animal).subscribe(
         (response: any) => {
           if (!response.animal) {

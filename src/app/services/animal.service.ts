@@ -29,4 +29,9 @@ export class AnimalService {
         let headers = new HttpHeaders().set('Content-Type', 'application/json');
         return this._http.get(this.url + 'animals', {headers: headers}); 
     }
+
+    getAnimal(id: number) {
+        let headers = new HttpHeaders().set('Content-Type', 'application/json'); 
+        return this._http.get(this.url + 'animal/' + id, {headers: headers});
+    }
 }

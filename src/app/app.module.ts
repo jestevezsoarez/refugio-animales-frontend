@@ -25,6 +25,7 @@ import { UserEditComponent } from './components/user-edit/user-edit.component';
 // Services
 import { UserService } from './services/user.service';
 import { UploadService } from './services/upload.service';
+import { AnimalDetailComponent } from './components/animal-detail/animal-detail.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { UploadService } from './services/upload.service';
     StoreComponent,
     RegisterComponent,
     LoginComponent,
-    UserEditComponent
+    UserEditComponent,
+    AnimalDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute, Params} from '@angular/router';
-import { GLOBAL } from "../../../services/global";
 
 // Models
 import { Animal } from '../../../models/animal';
 
 // Servicios
+import { GLOBAL } from "../../../services/global";
 import { AnimalService } from '../../../services/animal.service';
 
 @Component({
