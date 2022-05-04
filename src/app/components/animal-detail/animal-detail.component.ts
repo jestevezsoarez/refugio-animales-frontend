@@ -3,6 +3,7 @@ import {Router, ActivatedRoute, Params} from '@angular/router';
 
 // Models
 import { Animal } from '../../models/animal';
+import { User } from 'src/app/models/user';
 
 // Servicios
 import { GLOBAL } from "../../services/global";
@@ -26,7 +27,7 @@ export class AnimalDetailComponent implements OnInit {
     this.animal = new Animal('', '', '', 0, '', '');
    }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
     this.getAnimal();
   }
 
@@ -39,8 +40,8 @@ export class AnimalDetailComponent implements OnInit {
           if (!response.animal) {
             this._router.navigate(['/']);
           } else {
-            this.animal = response.animal;
-            console.log(this.animal);            
+            this.animal = response.animal;            
+            console.log(this.animal.user);            
           }
         },
         error => {
