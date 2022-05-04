@@ -24,12 +24,18 @@
             </span>
         </p>
 
+        <div *ngIf="is_edit && animal.image">
+            <div class="animal_image">
+                <img src="{{ url + 'get-image-animal/' + animal.image }}">
+            </div>
+        </div>
+
         <p>
             <label for="uploadImage">Imagen del animal</label>
             <input type="file" name="uploadImage" placeholder="Subir imagen..." (change)="fileChangeEvent($event)">
         </p>
     
-        <input type="submit" value="Agregar" class="btn btn-success">
+        <input type="submit" value="{{ title }}" class="btn btn-success">
     </form>
 </div>
 

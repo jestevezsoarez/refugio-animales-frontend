@@ -62,7 +62,11 @@
     height: 40px;
     overflow: hidden;
     border-radius: 500px;
-} 
+}
+
+.animal_image img {
+    width: 150px;
+}
 
 @keyframes deslizamiento {
     from {

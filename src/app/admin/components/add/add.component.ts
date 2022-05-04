@@ -23,6 +23,7 @@ export class AddComponent implements OnInit {
   url: string;
   status: string;
   filesToUpload: Array<File> = [];
+  is_edit: boolean;
 
   constructor(
     private _activatedRoute:ActivatedRoute, 
@@ -32,6 +33,7 @@ export class AddComponent implements OnInit {
     private _uploadService: UploadService
   ) {
       this.title = 'Add';
+      this.is_edit =true;
       this.animal = new Animal('','', '', 2017, '', '');
       this.identity = this._userService.getIdentity();
       this.token = this._userService.getToken();

@@ -41,7 +41,7 @@ export class AnimalDetailComponent implements OnInit {
             this._router.navigate(['/']);
           } else {
             this.animal = response.animal;            
-            console.log(this.animal.user);            
+            console.log(this.animal);            
           }
         },
         error => {
