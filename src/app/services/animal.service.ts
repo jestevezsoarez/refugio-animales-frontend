@@ -38,8 +38,15 @@ export class AnimalService {
     editAnimal(token: string, id: string, animal: Animal) {
         let params = JSON.stringify(animal);
         let headers = new HttpHeaders().set('Content-Type', 'application/json')
-                                        .set('Authorization', token); 
-
+                                        .set('Authorization', token);         
+        
         return this._http.put(this.url + 'animal/' + id, params, {headers: headers});
+    }
+
+    deleteAnimal(token: string, id: string) {
+        let headers = new HttpHeaders().set('Content-Type', 'application/json')
+                                        .set('Authorization', token);        
+                                        
+        return this._http.delete(this.url + 'animal/' + id, {headers: headers});
     }
 }
