@@ -23,6 +23,7 @@ export class ListComponent implements OnInit {
   status: string;
   token: string;
   animals: Animal[] = [];
+  busqueda: string = '';
 
   constructor(
     private _activatedRoute:ActivatedRoute, 
