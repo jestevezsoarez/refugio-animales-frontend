@@ -6,6 +6,7 @@ import { Animal } from '../../models/animal';
 
 // Services
 import { AnimalService } from '../../services/animal.service';
+import { GLOBAL } from "../../services/global";
 
 @Component({
   selector: 'app-animals',
@@ -14,12 +15,15 @@ import { AnimalService } from '../../services/animal.service';
 })
 export class AnimalsComponent implements OnInit {
 
+  title: string = 'Animales del Refugio';
   animals: Animal[] = [];
+  url: string = '';
 
   constructor(private _animalService: AnimalService) { }
 
   ngOnInit(): void {
     this.getAnimals();
+    this.url = GLOBAL.url;
   }
 
   getAnimals() {
@@ -28,6 +32,7 @@ export class AnimalsComponent implements OnInit {
           if (!response.animals) {
 
           } else {
+            console.log(response.animals);            
             this.animals = response.animals;
           }
       },
