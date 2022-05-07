@@ -65,4 +65,9 @@ export class UserService {
 
         return this._http.put(this.url + 'update-user/' + user_to_update._id, params, {'headers': headers});            
     }
+
+    getKeepers() {
+        let headers = new HttpHeaders().set('Content-Type', 'application/json');
+        return this._http.get(this.url + 'get-keepers', {headers: headers});
+    }
 }

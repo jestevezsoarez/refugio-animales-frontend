@@ -32,7 +32,7 @@ export class AnimalsComponent implements OnInit {
           if (!response.animals) {
 
           } else {
-            console.log(response.animals);            
+            //console.log(response.animals);            
             this.animals = response.animals;
           }
       },
